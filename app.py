@@ -1,4 +1,7 @@
-from flask import Flask, render_template, abort, make_response, jsonify
+from flask import Flask, render_template, abort, make_response, jsonify, Response
+import string
+import hashlib
+import random
 
 app = Flask(__name__)
 
@@ -20,11 +23,21 @@ def leet():
 
 @app.route('/xkcd')
 def xkcd():
-	return jsonify({'passphrase':'wWcjszQquamGk', 'hash':'d4c51be4152a53795497f13ff28d60b9'})
+	passphrase_s = list(string.letters)
+	random.shuffle(passphrase_s)
+	passphrase = ''.join(passphrase_s[:13])
+	return jsonify({'passphrase':passphrase, 'hash':hashlib.md5(passphrase).hexdigest()})
 
 @app.route('/md5')
 def md5():
-	pass
+	r = make_response(render_template('partials/darth.html'))
+	r.headers.add('s3cr3t', 'usethesourceluke')
+	return r
+
+@app.route('/usethesourceluke')
+def source():
+	r = make_response('UNICORNS! SERVERS! WOW!')
+	return r
 
 @app.errorhandler(404)
 def incorrect(e):
