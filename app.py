@@ -1,7 +1,5 @@
 from flask import Flask, render_template, abort, make_response, jsonify
 
-import pytz
-
 app = Flask(__name__)
 
 @app.route('/')
