@@ -9,10 +9,48 @@
 
 a {
 	color: @white;
+	cursor: pointer;
 }
 
 a:hover {
 	text-decoration: none;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+body {
+	min-height: 500px;
+}
+
+@-webkit-keyframes bblink {
+		from, to { background: @midnight-blue; }
+		50% { background: @wet-asphalt; }
+	}
+
+@-moz-keyframes bblink {
+	from, to { background: @midnight-blue; }
+	50% { background: @wet-asphalt; }
+}
+
+@-webkit-keyframes gblink {
+		from, to { background: @emerald; }
+		50% { background: @nephritis; }
+	}
+
+@-moz-keyframes gblink {
+	from, to { background: @turquoise; }
+	50% { background: @green-sea; }
+}
+
+.hint {
+	font-family: 'Nunito', sans-serif;
+	color: @white;
+	font-size: 18px;
 }
 
 .btn {
@@ -82,6 +120,7 @@ body {
 
 .wrapper {
 	width: 100%;
+	min-height: 550px;
 }
 
 .heart {
@@ -147,6 +186,8 @@ body {
 				float: left;
 				margin-left: 100px;
 				margin-top: 15px;
+				max-width: 50px;
+				max-height: 20px;
 			}
 		}
 	}
@@ -197,4 +238,26 @@ body {
 			}
 		}
 	}
+}
+
+.forty-two {
+	body {
+		background: #000;
+		-webkit-animation: 0.5s bblink step-end infinite;
+		-moz-animation: 0.5s bblink step-end infinite;
+		text-align: center;
+		padding-top: 20px;
+	}
+}
+
+.leet {
+	body {
+		background: #000;
+		-webkit-animation: 0.5s gblink step-end infinite;
+		-moz-animation: 0.5s gblink step-end infinite;
+		text-align: center;
+		padding-top: 20px;
+	}
+
+
 }
