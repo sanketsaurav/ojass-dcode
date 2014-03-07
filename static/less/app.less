@@ -1,0 +1,200 @@
+@import "variables.less";
+
+@import url(http://fonts.googleapis.com/css?family=Nunito:400,700);
+@import url(http://fonts.googleapis.com/css?family=Bitter:400,700);
+
+::selection {
+	background-color: @midnight-blue;
+}
+
+a {
+	color: @white;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.btn {
+	position: relative;
+    color: rgba(255,255,255,1);
+    text-decoration: none;
+    background-color: @nephritis;
+    text-transform: uppercase;
+    font-family: 'Bitter';
+    font-weight: 700;
+    font-size: 44px;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 9px 0px darken(@nephritis, 10%), 0px 9px 25px rgba(0,0,0,.7);
+    -moz-box-shadow: 0px 9px 0px darken(@nephritis, 10%), 0px 9px 25px rgba(0,0,0,.7);
+    box-shadow: 0px 9px 0px darken(@nephritis, 10%), 0px 9px 25px rgba(0,0,0,.7);
+    margin: 0 auto;
+    max-width: 400px;
+	text-align: center;
+	
+	-webkit-transition: all .1s ease;
+	-moz-transition: all .1s ease;
+	-ms-transition: all .1s ease;
+	-o-transition: all .1s ease;
+	transition: all .1s ease;
+}
+
+ .btn:active {
+    -webkit-box-shadow: 0px 3px 0px darken(@nephritis, 10%), 0px 3px 6px rgba(0,0,0,.9);
+    -moz-box-shadow: 0px 3px 0px darken(@nephritis, 10%), 0px 3px 6px rgba(0,0,0,.9);
+    box-shadow: 0px 3px 0px darken(@nephritis, 10%), 0px 3px 6px rgba(0,0,0,.9);
+    position: relative;
+    top: 6px;
+}
+
+.four-oh-four {
+	@-webkit-keyframes rblink {
+		from, to { background: @alizarin; }
+		50% { background: red; }
+	}
+
+	@-moz-keyframes rblink {
+		from, to { background: @alizarin; }
+		50% { background: red; }
+	}
+
+	body {
+		background: @alizarin;
+		-webkit-animation: 0.5s rblink step-end infinite;
+		-moz-animation: 0.5s rblink step-end infinite;
+		text-align: center;
+	}
+
+	.mood {
+		margin-top: 50px;
+	}
+}
+
+body {
+	font-family: 'Nunito', sans-serif;
+	font-weight: 400;
+}
+
+.wrapper {
+	width: 100%;
+}
+
+.heart {
+	color: @pomegranate;
+}
+.credits {
+	color: @white;
+	float: right;
+	margin-right: 100px;
+
+	a {
+		color: @white;
+	}
+}
+
+.mute {
+	float: left;
+	margin-left: 100px;
+	a {
+		text-decoration: none;
+	}
+}
+
+.home {
+
+	@-webkit-keyframes blink {
+		from, to { background: @amethyst; }
+		25% { background: @emerald; }
+		50% { background: @alizarin; }
+		75% { background: @orange; }
+	}
+
+	@-moz-keyframes blink {
+		from, to { background: @amethyst; }
+		25% { background: @emerald; }
+		50% { background: @alizarin; }
+		75% { background: @orange; }
+	}
+
+	.three-dee{
+	font-family: 'Arial Black', sans-serif;
+	line-height: 1em;
+	color: #ffffff;
+	font-size: 171px;
+	text-shadow:0px 0px 0 rgb(221,221,221),1px 1px 0 rgb(204,204,204),2px 2px 0 rgb(188,188,188),3px 3px 0 rgb(171,171,171),4px 4px 0 rgb(154,154,154),5px 5px 0 rgb(137,137,137),6px 6px 0 rgb(120,120,120),7px 7px 0 rgb(104,104,104),8px 8px 0 rgb(87,87,87),9px 9px 0 rgb(70,70,70), 10px 10px 0 rgb(53,53,53),11px 11px 10px rgba(0,0,0,0.7),11px 11px 1px rgba(0,0,0,0.5),0px 0px 10px rgba(0,0,0,.2);}
+
+	body {
+		background: #000;
+		-webkit-animation: 0.9s blink ease infinite;
+		-moz-animation: 0.9s blink ease infinite;
+	}
+
+	header {
+		margin: 0 auto;
+		margin-top: 80px;
+		text-align: center;
+		text-transform: uppercase;
+		width: 100%;
+		margin-bottom: -95px;
+
+		.top {
+			.fb-share-button {
+				float: left;
+				margin-left: 100px;
+				margin-top: 15px;
+			}
+		}
+	}
+
+	h2 {
+		color: @belize-hole;
+		text-shadow: 0px 2px 3px @white;
+		font-size: 45px;
+		margin-bottom: -135px;
+		font-weight: bold;
+		text-align: right;
+		margin-right: 100px;
+		font-family: 'Nunito', sans-serif;
+		font-weight: 700;
+	}
+
+	.instructions {
+		min-height: 150px;
+		background: lighten(rgba(219,87,5,1), 10%);
+		margin: 0 auto;
+		width: 85%;
+		margin-bottom: 25px;
+		box-shadow: 5px 5px 0px darken(rgba(219,87,5,1), 10%);
+		border-radius: 10px;
+		text-align: center;
+		padding: 5px;
+
+		p {
+			color: lighten(@clouds, 10%);
+			font-size: 24px;
+		}
+
+		.url {
+			background-color: @white;
+			padding: 10px;
+			border: 5px rgba(219,87,5,1) solid;
+			border-radius: 5px;
+			font-family: 'Bitter', sans-serif;
+			font-size: 24px;
+			color: @peter-river;
+			margin: 0 auto;
+			margin-top: -12px;
+			margin-bottom: -12px;
+			width: 35%;
+
+			strong {
+				color: @alizarin;
+			}
+		}
+	}
+}

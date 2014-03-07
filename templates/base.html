@@ -1,1 +1,41 @@
-<h1>Hello, dcode!</h1>
+<!DOCTYPE html>
+
+<html class="{{page}}">
+	
+	<head>
+		<meta charset="utf-8">
+		<title>DCODE - Online Hacks ¯\_(ツ)_/¯</title>
+		<meta name="description" content="Ojass - DCODE Online Hacks. Each hack has clues to the next one. The answer makes the URL for the next page. Hack on. Fiddle away. Break stuff. First hacker to reach the last page wins!">
+		<meta name="author" content="Sanket Saurav <sanket@campushash.com>">
+		<meta property="og:title" content="Ojass - DCODE Online Hacks">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="http://dcode.ojass.com">
+		<meta property="og:image" content="http://dcode.ojass.in/static/img/dcode.png">
+		<meta property="og:site_name" content="Ojass - DCODE Online Hacks">
+		<meta property="fb:admins" content="577360464">
+		<meta property="og:locale" content="en_us">
+		<meta property="og:description" content="Each hack has clues to the next one. The answer makes the URL for the next page. Hack on. Fiddle away. Break stuff. First hacker to reach the last page wins!">
+		<link rel="stylesheet" href="/static/css/app.css">
+		<script src="/static/js/app.js"></script>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			{% block main %}
+			{% endblock main %}
+		</div>
+		<div class="mute"><a href="#" onclick="mute();">Mute sound</a></div>
+		<div class="credits">
+			Hacked with <span class="heart">&hearts;</span> by <a href="">Sanket</a>
+		</div>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		  ga('create', 'UA-48758782-1', 'ojass.in');
+		  ga('send', 'pageview');
+		</script>
+	</body>
+
+</html>

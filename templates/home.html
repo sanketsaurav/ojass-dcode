@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% set page="home" %}
+{% block main %}
+<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=612392062161270";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+<header>
+	<div class="top">
+		<div class="fb-share-button" data-href="http://dcode.ojass.in" data-type="button_count"></div>
+		<h2>DCODE • OJASS '14</h2>
+	</div>
+	<h1 class="three-dee">Live Hacks</h1>
+	<h3></h3>
+</header>
+<section class="instructions">
+	<p>
+		Each <strong>hack</strong> has clues to the next one. The <strong>answer</strong> makes the URL for the next page as:
+	</p>
+	<div class="url">http://dcode.ojass.in/<strong>answer</strong></div>
+	<p>
+		Hack on. Fiddle away. Break stuff. <strong>First hacker to solve the last hack wins!</strong>
+	</p>
+</section>
+<a href="/42" class="btn">Bring it on!</a>
+{% endblock main %}
