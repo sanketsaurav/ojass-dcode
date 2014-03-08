@@ -28,10 +28,28 @@ def xkcd():
 	passphrase = ''.join(passphrase_s[:13])
 	return jsonify({'passphrase':passphrase, 'hash':hashlib.md5(passphrase).hexdigest()})
 
+@app.route('/dcode2')
+def dcode1():
+	passphrase_s = list(string.letters)
+	random.shuffle(passphrase_s)
+	passphrase = ''.join(passphrase_s[:13])
+	return jsonify({'passphrase':passphrase, 'hash':hashlib.md5(passphrase).hexdigest()})
+
 @app.route('/md5')
 def md5():
 	r = make_response(render_template('partials/darth.html'))
 	r.headers.add('s3cr3t', 'usethesourceluke')
+	return r
+
+@app.route('/dcode3')
+def dcode2():
+	r = make_response(render_template('partials/darth.html'))
+	r.headers.add('s3cr3t', 'usethesourceluke')
+	return r
+
+@app.route('/problems')
+def dcode3():
+	r = make_response(render_template('partials/problem.html'))
 	return r
 
 @app.route('/usethesourceluke')
